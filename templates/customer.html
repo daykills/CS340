@@ -1,0 +1,66 @@
+<!-- 
+Customers Table
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Customers</title>
+  <link rel="stylesheet" href="stylesheet.css" type="text/css">
+</head>
+<body>
+  <!-- Data Table -->
+  <h1 align="center">Customers</h1>
+  <p align="center">Records the detailed information of Customers we do business with</p>
+  <h2 align="center">Search Customers by ID or Name</h2>
+  <form id="searchForm" align="center">
+    <input type="number" name="searchID" placeholder="customerID" />
+    <input type="text" name="searchName" placeholder="customerName" />
+    <input type="submit" value="Search" />
+    <input type="submit" value="Display All" />
+  </form>
+  <br>
+  <h2 align="center">Output</h2>
+  <table id="customersTable" align="center" style="border:3px #cccccc solid;" cellpadding="10" border='1'>
+  	<tr>
+  	  <th>customerID</th>
+  	  <th>name</th>
+  	  <th>address</th>
+  	  <th>email</th>
+      <th>phoneNumber</th>
+  	  <th>Update Button</th>
+  	  <th>Delete Botton</th>
+  	</tr>
+  	<tr>
+  	  <form>
+  	  	<td>1</td>
+  	  	<td>Daenerys Targaryen</td>
+  	  	<td><input type="text" name="address" value="Great Russell Street London WC1B 3DG" /></td>
+        <td><input type="email" name="customerMail" value="queenOfDragon@gmail.com"></td>
+        <td><input type="number" name="phone" value="123456789"></td>
+  	  	<td><button>Update</button></td>
+  	  	<td><button>Delete</button></td>
+  	  </form>
+  	</tr>
+    <tr>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td><button>Update</button></td>
+      <td><button>Delete</button></td>
+    </tr>
+  </table>
+
+  <!-- Add Row Form -->
+  <h2 align="center">Add New Customers</h2>
+  <form id="addForm" align="center">
+    <input type="text" name="customerName" placeholder="name" />
+    <input type="text" name="address" placeholder="address" />
+    <input type="email" name="customerMail" placeholder="email" />
+    <input type="number" name="phone" placeholder="phoneNumber">
+    <input type="submit" value="Submit" />
+  </form>
+</body>
+</html>

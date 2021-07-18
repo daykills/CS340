@@ -1,0 +1,117 @@
+<!-- 
+Salespeople_Customers
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Salespeople_Customers</title>
+  <link rel="stylesheet" href="stylesheet.css" type="text/css">
+</head>
+<body>
+  <!-- Data Table -->
+  <h1 align="center">Salespeople_Customers (Sales Record)</h1>
+  <p align="center">Records the detailed information of sales record</p>
+  <h2 align="center">Search by date, staffID, or customerID</h2>
+  <form id="searchForm" align="center">
+    <input type="date" name="searchDate" placeholder="date" />
+    <input type="number" name="staff" placeholder="staffID" />
+    <input type="number" name="customer" placeholder="customerID" />
+    <input type="submit" value="Search" />
+    <input type="submit" value="Display All" />
+  </form>
+  <br>
+  <h2 align="center">Output</h2>
+  <table id="salesCustomersTable" align="center" style="border:3px #cccccc solid;" cellpadding="10" border='1'>
+  	<tr>
+  	  <th>date</th>
+  	  <th>staffID</th>
+  	  <th>customerID</th>
+  	  <th>sales</th>
+  	  <th>Update Button</th>
+  	  <th>Delete Botton</th>
+  	</tr>
+  	<tr>
+  	  <form>
+  	  	<td><input type="date" name="saleDate" value="2021-07-18" /></td>
+  	  	<td>1</td>
+  	  	<td>1</td>
+        <td><input type="number" name="sales" value="3000000"></td>
+  	  	<td><button>Update</button></td>
+  	  	<td><button>Delete</button></td>
+  	  </form>
+  	</tr>
+    <tr>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td><button>Update</button></td>
+      <td><button>Delete</button></td>
+    </tr>
+  </table>
+
+  <!-- Add Row Form -->
+  <h2 align="center">Add New Sales Record</h2>
+  <form id="addForm" align="center">
+    <input type="date" name="saleDate" placeholder="date" />
+    <input type="number" name="staffID" placeholder="staffID" />
+    <input type="number" name="customerID" placeholder="customerID" />
+    <input type="number" name="sales" placeholder="sales" />
+    <input type="submit" value="Submit" />
+  </form>
+  <br>
+  <div align="center">
+    <div style="width:300px; height:auto; float:left; display:inline">
+      <h3 align="center">Check Salespeople Information</h3>
+      <h3 align="center">(ID or Name)</h3>
+      <form id="checkSales" align="center">
+        <input type="number" name="staffID" placeholder="staffID" />
+        <input type="number" name="staffName" placeholder="staffName" />
+        <br>
+        <input type="submit" value="Check" />
+      </form>
+      <h3 align="center">Result</h3>
+      <table align="center" style="border:3px #cccccc solid;" cellpadding="10" border='1'>
+        <tr>
+          <th>staffID</th>
+          <th>staffName</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Harry Potter</td>
+        </tr>
+        <tr>
+          <td>...</td>
+          <td>...</td>
+        </tr>
+      </table>
+    </div>
+    <div style="width:300px; height:auto; float:right; display:inline">
+      <h3 align="center">Check Customers Information</h3>
+      <h3 align="center">(ID or Name)</h3>
+      <form id="checkCustomer" align="center">
+        <input type="number" name="customerID" placeholder="customerID" />
+        <input type="number" name="customerName" placeholder="customerName" />
+        <br>
+        <input type="submit" value="Check" />
+      </form>
+      <h3 align="center">Result</h3>
+      <table align="center" style="border:3px #cccccc solid;" cellpadding="10" border='1'>
+        <tr>
+          <th>customerID</th>
+          <th>customerName</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Daenerys Targaryen</td>
+        </tr>
+        <tr>
+          <td>...</td>
+          <td>...</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</body>
+</html>

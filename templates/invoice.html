@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View, Edit, or Delete Invoices</title>
+</head>
+<body>
+  <fieldset>
+    <caption>Create a new invoice</caption>
+    <br>
+    <br>
+    <form class="add">
+          <input id="new-date" type="date" name="date" placeholder = "date"></div>
+          <input id="quantity" type="number" name="quantity" min="0" placeholder="quantity"></div>
+          <input id="totalAmount" type="number" name="totalAmount" min="0" placeholder="totalAmount"></div>
+          <button class="submitBtn">Submit</button>
+    </form>
+</fieldset>
+
+<br>
+<br>
+
+<fieldset>
+  <caption>Search by InvoiceID</caption>
+  <br>
+  <br>
+  <form class="search">
+        <input id="invoiceID" type="number"  placeholder = "invoiceID"></div>
+        <button class="submitBtn">Submit</button>
+        <button class="clear">Clear</button>
+  </form>
+</fieldset>
+
+<br>
+<br>
+
+<table border="1" align="center" width = 1000px>
+<caption><b>Invoice Register List</b></caption>
+      <tr align="center">
+        <th>invoiceID</th>
+        <th>date</th>
+        <th>orderID</th>
+        <th>quantity</th>
+        <th>totalAmount</th>
+        <th>acctID</th>
+        <th>update button</th>
+        <th>delete button</th>
+      </tr>
+      <tbody>
+        <tr align="center">
+        <td>1</td>
+        <td><input type="date" name="date" value="2021/01/01"></td>
+        <td>1</td>
+        <td><input type="number" value="20"></td>
+        <td><input type="number" value="100000"></td>
+        <td>2</td>
+        <td><button>update</button></td>
+        <td><button>delete</button></td>
+      </tbody>
+</table>
+
+
+
+  
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!-- 
+Salespeople Table
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Salespeople</title>
+  <link rel="stylesheet" href="stylesheet.css" type="text/css">
+</head>
+<body>
+  <!-- Data Table -->
+  <h1 align="center">Salespeople</h1>
+  <p align="center">Records the detailed information of Salespeople who create the Orders to the Customers</p>
+  <h2 align="center">Search Salespeople by ID or Name</h2>
+  <form id="searchForm" align="center">
+    <input type="number" name="searchID" placeholder="staffID" />
+    <input type="text" name="searchName" placeholder="name" />
+    <input type="submit" value="Search" />
+    <input type="submit" value="Display All" />
+  </form>
+  <br>
+  <h2 align="center">Output</h2>
+  <table id="salespeopleTable" align="center" style="border:3px #cccccc solid;" cellpadding="10" border='1'>
+  	<tr>
+  	  <th>staffID</th>
+  	  <th>name</th>
+  	  <th>age</th>
+  	  <th>saleAmount</th>
+  	  <th>Update Button</th>
+  	  <th>Delete Botton</th>
+  	</tr>
+  	<tr>
+  	  <form>
+  	  	<td>1</td>
+  	  	<td>Harry Potter</td>
+  	  	<td><input type="number" name="age" value="41"></td>
+  	  	<td><input type="number" name="saleAmount" value="3000000"></td>
+  	  	<td><button>Update</button></td>
+  	  	<td><button>Delete</button></td>
+  	  </form>
+  	</tr>
+    <tr>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td><button>Update</button></td>
+      <td><button>Delete</button></td>
+    </tr>
+  </table>
+
+  <!-- Add Row Form -->
+  <h2 align="center">Add New Salespeople</h2>
+  <form id="addForm" align="center">
+    <input type="text" name="staffName" placeholder="name" />
+    <input type="number" name="age" placeholder="age" />
+    <input type="number" name="saleAmount" placeholder="saleAmount" />
+    <input type="submit" value="Submit" />
+  </form>
+</body>
+</html>

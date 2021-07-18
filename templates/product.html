@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View, Edit, or Delete Invoices</title>
+</head>
+<body>
+  <fieldset>
+    <caption>Add a new product</caption>
+    <br>
+    <br>
+    <form class="add">
+          <input id="name" type="text" name="name" placeholder="name"></div>
+          <input id="quantity" type="number" name="quantity" min="0" placeholder="quantity"></div>
+          <input id="cost" type="value" name="cost" min="0" placeholder="cost"></div>
+          <button class="submitBtn">Submit</button>
+    </form>
+</fieldset>
+
+<br>
+<br>
+
+<fieldset>
+  <caption>Search by ProductID</caption>
+  <br>
+  <br>
+  <form class="search">
+        <input id="ProductID" type="number"  placeholder = "ProductID"></div>
+        <button class="submitBtn">Submit</button>
+        <button class="clear">Clear</button>
+  </form>
+</fieldset>
+
+<br>
+<br>
+
+<table border="1" align="center" width = 1000px>
+<caption><b>Products List</b></caption>
+      <tr align="center">
+        <th>ID</th>
+        <th>name</th>
+        <th>quantity</th>
+        <th>cost in dollar</th>
+        <th>update button</th>
+        <th>delete button</th>
+      </tr>
+      <tbody>
+        <tr align="center">
+        <td>1</td>
+        <td><input type="text" value="cameraA"></td>
+        <td><input type="number" value="1000"></td>
+        <td><input type="number" value="10"></td>
+        <td><button>update</button></td>
+        <td><button>delete</button></td>
+      </tbody>
+
+
+</table>
+
+  
+</body>
+</html>

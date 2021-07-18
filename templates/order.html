@@ -1,0 +1,69 @@
+<!-- 
+Orders Table
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Orders</title>
+  <link rel="stylesheet" href="stylesheet.css" type="text/css">
+</head>
+<body>
+  <!-- Data Table -->
+  <h1 align="center">Orders</h1>
+  <p align="center">Records the detailed information of Orders from Customers</p>
+  <h2 align="center">Search Orders by ID or customerID</h2>
+  <form id="searchForm" align="center">
+    <input type="number" name="searchID" placeholder="orderID" />
+    <input type="number" name="searchCustomer" placeholder="customerID" />
+    <input type="submit" value="Search" />
+    <input type="submit" value="Display All" />
+  </form>
+  <br>
+  <h2 align="center">Output</h2>
+  <table id="ordersTable" align="center" style="border:3px #cccccc solid;" cellpadding="10" border='1'>
+  	<tr>
+  	  <th>orderID</th>
+  	  <th>customerID</th>
+  	  <th>quantity</th>
+  	  <th>totalCost</th>
+  	  <th>status</th>
+  	  <th>shipmentStatus</th>
+  	  <th>Update Button</th>
+  	  <th>Delete Botton</th>
+  	</tr>
+  	<tr>
+  	  <form>
+  	  	<td>1</td>
+  	  	<td>1</td>
+  	  	<td><input type="number" name="quantity" value="5"></td>
+  	  	<td><input type="number" name="totalCost" value="3000"></td>
+  	  	<td>Incompleted</td>
+  	  	<td>Completed</td>
+  	  	<td><button>Update</button></td>
+  	  	<td><button>Delete</button></td>
+  	  </form>
+  	</tr>
+    <tr>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td><button>Update</button></td>
+      <td><button>Delete</button></td>
+    </tr>
+  </table>
+
+  <!-- Add Row Form -->
+  <h2 align="center">Add New Orders</h2>
+  <p align="center">Note: status & shipmentStatus will default to "Incompleted"</p>
+  <form id="addForm" align="center">
+    <input type="number" name="customerID" placeholder="customerID" />
+    <input type="number" name="quantity" placeholder="quantity" />
+    <input type="number" name="totalCost" placeholder="totalCost" />
+    <input type="submit" value="Submit" />
+  </form>
+</body>
+</html>
