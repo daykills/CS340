@@ -41,10 +41,10 @@ CREATE TABLE Accountants (
 CREATE TABLE Invoices (
   id INT(11) PRIMARY KEY AUTO_INCREMENT,
   recordDate DATE NOT NULL,
-  orderID INT NULL,
+  orderID INT NOT NULL,
   quantity INT(11) NOT NULL,
   totalAmount INT(11) NOT NULL,
-  acctID INT NULL,
+  acctID INT,
   FOREIGN KEY (orderID) REFERENCES Orders (id),
   FOREIGN KEY (acctID) REFERENCES Accountants (id)
 );
@@ -60,7 +60,7 @@ CREATE TABLE Salespeople (
 -- Salespeople_Customers (M:M between Salespeople and Customers)
 CREATE TABLE Salespeople_Customers (
   saleDate DATE NOT NULL,
-  staffID INT NOT NULL,
+  staffID INT,
   customerID INT NOT NULL,
   sales INT(11) NOT NULL,
   FOREIGN KEY (staffID) REFERENCES Salespeople (id),
@@ -106,7 +106,7 @@ INSERT INTO Accountants (name, age) VALUES ("Ananya Jaiswal", 35);
 INSERT INTO Invoices (recordDate, orderID, quantity, totalAmount, acctID) VALUES ("2021-03-10", 1, 2, 400, 1);
 INSERT INTO Invoices (recordDate, orderID, quantity, totalAmount, acctID) VALUES ("2021-03-12", 2, 2, 3000, 1);
 INSERT INTO Invoices (recordDate, orderID, quantity, totalAmount, acctID) VALUES ("2021-03-15", 2, 1, 2000, 1);
-INSERT INTO Invoices (recordDate, orderID, quantity, totalAmount, acctID) VALUES ("2021-03-16", 2, 1, 200, 1);
+INSERT INTO Invoices (recordDate, orderID, quantity, totalAmount, acctID) VALUES ("2021-03-16", 2, 1, 200, NULL);
 
 INSERT INTO Salespeople (name, age, saleAmount) VALUES ("Michael Fern", 29, 2400);
 INSERT INTO Salespeople (name, age, saleAmount) VALUES ("Abdul Rehman", 40, 5200);
