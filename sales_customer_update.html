@@ -1,0 +1,27 @@
+<h3>Update salespeople_customer</h3>
+<form id="update" method="post">
+
+<fieldset>
+  <br><br>
+  <input type="hidden" name="id" value = "{{sp[0] }}" placeholder="">
+  SaleDate: <input type="date" name="saleDate" value = "{{ sp[1] }}"><br><br>
+  <label>StaffID</label>
+        <select id="staffID" name="staffID"  value = "{{sp[2] }}" >
+              {% for staffID in staffIDs %}
+              <option value={{staffID[0]}}>{{staffID[1]}}</option>
+              {% endfor %}
+        </select><br><br>
+      <label>CustomerID</label>
+        <select id="customerID" name="customerID"  value = "{{sp[3] }}"  >
+              {% for customer in customers %}
+              <option value={{customer[0]}}>{{customer[1]}}</option>
+              {% endfor %}
+        </select><br><br>
+
+  Sales: <input type="number" name="sales" value = "{{ sp[4] }}"><br><br>
+ 
+    </select><br><br>
+</fieldset>
+    <input type="submit" value="Submit">
+ </form>
+<br/>

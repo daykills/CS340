@@ -1,0 +1,36 @@
+<h3>Update Order</h3>
+<form id="update" method="post">
+
+<fieldset>
+  <br><br>
+  <input type="hidden" name="id" value = "{{order[0] }}" placeholder="">
+  customerID: <select name="custID" value = "{{ order[1] }}">
+    <!-- display all accountants inside this dropdown -->
+          {% for customer in customers %}
+            {{ customer[0] }}
+            {{ customer[5] }}
+            {% if customer[0] == customer[5]  %}
+               <option selected value="{{ customer[0] }}">{{ customer[1] }}</option>
+            {% else %}
+              <option value="{{ customer[0] }}">{{ customer[1] }}</option>
+            {% endif %}
+          {% endfor %}
+  </select><br><br>
+  
+  quantity: <input type="text" name="quantity" value = "{{ order[2] }}" ><br><br>
+  totalCost: <input type="text" name="totalCost" value = "{{ order[3] }}" ><br><br>
+  status: <select type="number" name="status" value = "{{ order[4] }}">
+    <option>Incompleted</option>
+    <option>Completed</option> 
+</select><br><br>
+
+
+  shipmentStatus: <select type="text" name="shipmentStatus" value = "{{ order[5] }}"><br><br>
+    <option>Not_Shipped</option>
+    <option>Shipped</option>
+</select><br><br>
+<br><br>
+</fieldset>
+    <input type="submit" value="Submit">
+ </form>
+<br/>

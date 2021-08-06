@@ -1,0 +1,27 @@
+<h3>Update Invoice</h3>
+<form id="update" method="post">
+
+
+<fieldset>
+  <br><br>
+  <input type="hidden" name="id" value = "{{invoice[0] }}" placeholder="">
+  Date: <input type="text" name="recordDate" value = "{{ invoice[1] }}"><br><br>
+  OrderID: <input type="text" name="orderID" value = "{{ invoice[2] }}" ><br><br>
+  Quantity: <input type="text" name="quantity" value = "{{ invoice[3] }}" ><br><br>
+  TotalAmount: <input type="number" name="totalAmount" value = "{{ invoice[4] }}"><br><br>
+  AcctID: <select name="acctID">
+  <!-- display all accountants inside this dropdown -->
+        {% for accoutant in accountants %}
+          {{ accoutant[0] }}
+          {{ invoice[5] }}
+          {% if accoutant[0] == invoice[5]  %}
+             <option selected value="{{ accoutant[0] }}">{{ accoutant[1] }}</option>
+          {% else %}
+            <option value="{{ accoutant[0] }}">{{ accoutant[1] }}</option>
+          {% endif %}
+        {% endfor %}
+    </select><br><br>
+</fieldset>
+    <input type="submit" value="Submit">
+ </form>
+<br/>
